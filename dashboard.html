@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu perfil | Something Gamer</title><link rel="icon" type="image/png" href="assets/logo.png"><link rel="apple-touch-icon" href="assets/logo.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app-theme.css">
+    <script type="module" src="theme.js"></script>
+</head>
+
+<body class="dashboard-page">
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="sg-header">
+
+        <a href="dashboard.html" class="brand">
+
+            <img src="assets/logo.png" alt="Something Gamer">
+
+            <span>Something Gamer</span>
+
+        </a>
+
+        <nav>
+
+            <a href="feed.html">Feed</a>
+            <a href="dashboard.html" class="active">Meu perfil</a>
+            <a href="social.html">Comunidade</a>
+            <a href="chat.html">Chat</a>
+            <a href="Games/Games.html">Explorar</a>
+            <a href="events.html">Eventos</a>
+            <a href="companies.html">Empresas</a>
+            <a href="verification.html">Verificação</a>
+            <a href="settings.html">Configurações</a>
+
+        </nav>
+
+        <button class="login-btn" id="profileButton" type="button">
+            Sair
+        </button>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="dashboard">
+
+        <section class="promotion-banner" id="promotionBanner" hidden></section>
+
+        <!-- =====================================
+             PERFIL
+        ====================================== -->
+
+        <section class="profile-card">
+
+            <div class="profile-background"></div>
+
+            <div class="profile-main">
+
+                <div class="profile-avatar" id="profileAvatar">
+                    G
+
+                    <span class="online-dot"></span>
+                </div>
+
+
+                <div class="profile-info">
+
+                    <span class="profile-type">
+                        GAMER
+                    </span>
+
+                    <h1 id="profileUsername">
+                        Jogador
+                    </h1>
+
+                    <span class="profile-handle" id="profileHandle">
+                        @jogador
+                    </span>
+
+                    <p id="profileEmail">
+                        Seu perfil gamer no Something Gamer.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="edit-profile-btn"
+                    onclick="window.location.href='edit-profile.html'">
+
+                    Editar perfil
+
+                </button>
+
+                <button class="share-profile-btn" id="shareProfileButton" type="button">Compartilhar perfil</button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ESTATÍSTICAS
+        ====================================== -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    Jogos
+                </span>
+
+                <strong id="gamesCount">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    Seguidores
+                </span>
+
+                <strong id="followersCount">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    Seguindo
+                </span>
+
+                <strong id="followingCount">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    Nível
+                </span>
+
+                <strong id="levelCount">
+                    1
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CRIAR PUBLICAÇÃO
+        ====================================== -->
+
+        <section class="create-post" id="criar-publicacao">
+
+            <div class="create-post-header">
+
+                <div class="mini-avatar" id="postAvatar">
+                    G
+                </div>
+
+                <button
+                    class="post-input"
+                    id="openPostCreator">
+
+                    O que você quer compartilhar?
+
+                </button>
+
+            </div>
+
+
+            <div class="post-actions">
+
+                <button
+                    class="post-action"
+                    id="postImageBtn">
+
+                    <span class="action-icon image-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <path d="M21 15l-5-5L5 21"></path>
+                        </svg>
+                    </span>
+
+                    <span>Foto</span>
+
+                </button>
+
+
+                <button
+                    class="post-action"
+                    id="postVideoBtn">
+
+                    <span class="action-icon video-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="5" width="14" height="14" rx="3"></rect>
+                            <path d="M17 9l4-2v10l-4-2"></path>
+                        </svg>
+                    </span>
+
+                    <span>Vídeo</span>
+
+                </button>
+
+
+                <button
+                    class="post-action"
+                    id="postPollBtn">
+
+                    <span class="action-icon poll-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 19V9"></path>
+                            <path d="M12 19V5"></path>
+                            <path d="M19 19v-7"></path>
+                        </svg>
+                    </span>
+
+                    <span>Enquete</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="social-home" aria-label="Comunidade Something Gamer">
+            <div class="feed-column">
+                <div class="feed-toolbar">
+                    <div><h2>Seu feed</h2></div>
+                    <div class="feed-filters" aria-label="Filtrar publicações">
+                        <button class="feed-filter active" data-feed="all">Para você</button>
+                        <button class="feed-filter" data-feed="video">Vídeos</button>
+                        <button class="feed-filter" data-feed="news">Notícias</button>
+                    </div>
+                </div>
+                <div class="feed-list" id="feedList"><div class="feed-loading"><i></i><i></i><i></i></div></div>
+                <button class="load-more-feed" id="loadMoreFeed" type="button" hidden>Carregar mais</button>
+            </div>
+            <aside class="community-sidebar">
+                <section class="sidebar-card"><div class="sidebar-heading"><h3>Novos gamers</h3></div><div id="friendSuggestions" class="friend-suggestions"><p>As sugestões aparecerão conforme a comunidade publicar.</p></div></section>
+                <section class="sidebar-card verification-card-mini"><div class="seal-mini" aria-hidden="true">S<span><svg class="ico" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.6 12.4 9.6 17.4 19.4 6.6"/></svg></span></div><div><h3>Destaque seu perfil</h3><p>Selo, prioridade e mais confiança por R$ 14,90/mês.</p><a href="verification.html">Conhecer benefícios →</a></div></section>
+            </aside>
+        </section>
+
+        <!-- =====================================
+             CONTEÚDO DO PERFIL
+        ====================================== -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- BIBLIOTECA -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+<h2>
+                            Seus jogos
+                        </h2>
+
+                    </div>
+
+                    <button class="panel-link" id="viewAllGames" type="button">
+                        Ver todos
+                    </button>
+
+                </div>
+
+
+                <div class="empty-library">
+
+                    <div class="empty-icon">
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M6 4h12"></path>
+                            <path d="M6 8h12"></path>
+                            <path d="M6 12h8"></path>
+                            <path d="M6 16h6"></path>
+                            <path d="M4 20h16"></path>
+                        </svg>
+
+                    </div>
+
+                    <p>
+                        Seus jogos aparecerão aqui.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ATIVIDADE -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+<h2>
+                            Atividade recente
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity-list" id="activityList">
+
+                    <div class="activity-item">
+
+                        <span class="activity-dot"></span>
+
+                        <div>
+
+                            <strong>
+                                Perfil criado
+                            </strong>
+
+                            <p>
+                                Bem-vindo ao Something Gamer.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <span class="activity-dot"></span>
+
+                        <div>
+
+                            <strong>
+                                Novo jogador
+                            </strong>
+
+                            <p>
+                                Você entrou para a comunidade.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CONEXÕES
+        ====================================== -->
+
+        <section class="connections-section">
+
+            <div class="connections-heading">
+
+<h2>
+                    Suas contas
+                </h2>
+
+                <p>
+                    Conecte suas plataformas para deixar
+                    seu perfil ainda mais completo.
+                </p>
+
+            </div>
+
+
+            <div class="connections-grid">
+
+
+                <!-- STEAM -->
+
+                <div class="connection-card">
+
+                    <div class="connection-left">
+
+                        <div class="platform-icon steam-icon">
+                            <img
+                                src="assets/steam.png"
+                                alt="Steam">
+
+                        </div>
+
+                        <div class="connection-text">
+
+                            <strong>
+                                Steam
+                            </strong>
+
+                            <span id="steamStatus">
+                                Não conectada
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="connectSteam"
+                        class="connect-btn">
+
+                        Conectar
+
+                    </button>
+
+                </div>
+
+
+                <a class="connection-card" href="Games/Games.html">
+                    <div class="connection-left"><div class="platform-icon"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.3 8.4h5.4a6.1 6.1 0 0 1 6 5l.5 2.7a2.5 2.5 0 0 1-4.6 1.7l-1.3-2.1H8.7l-1.3 2.1a2.5 2.5 0 0 1-4.6-1.7l.5-2.7a6.1 6.1 0 0 1 6-5Z"/><path d="M8.1 11.5v2.4M6.9 12.7h2.4M15.4 12.1h.01M17.4 14h.01"/></svg></div><div class="connection-text"><strong>Minha biblioteca</strong><span>Jogos, horas e conquistas importados da Steam</span></div></div><span class="connect-btn">Abrir</span>
+                </a>
+                <a class="connection-card" href="events.html">
+                    <div class="connection-left"><div class="platform-icon"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 4h8v5a4 4 0 0 1-8 0Z"/><path d="M8 5.2H5.2A2.8 2.8 0 0 0 8 8M16 5.2h2.8A2.8 2.8 0 0 1 16 8"/><path d="M12 13v4M9.2 20.2h5.6M10.4 17h3.2"/></svg></div><div class="connection-text"><strong>Eventos da comunidade</strong><span>Participe de campeonatos e encontros</span></div></div><span class="connect-btn">Explorar</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         MODAL DE PUBLICAÇÃO
+    ========================================== -->
+
+    <div
+        class="post-modal"
+        id="postModal"
+        aria-hidden="true">
+
+        <div class="post-modal-overlay" id="closePostModal"></div>
+
+        <div class="post-modal-box">
+
+            <div class="post-modal-header">
+
+                <div>
+
+<h2>
+                        Criar conteúdo
+                    </h2>
+
+                </div>
+
+                <button
+                    class="close-modal"
+                    id="closePostButton">
+
+                    ×
+
+                </button>
+
+            </div>
+
+
+            <div class="post-type-selector">
+
+                <button
+                    class="post-type active"
+                    data-type="text">
+
+                    Publicação
+
+                </button>
+
+                <button
+                    class="post-type"
+                    data-type="image">
+
+                    Imagem
+
+                </button>
+
+                <button
+                    class="post-type"
+                    data-type="video">
+
+                    Vídeo
+
+                </button>
+
+                <button
+                    class="post-type"
+                    data-type="poll">
+
+                    Enquete
+
+                </button>
+
+            </div>
+
+
+            <div class="post-form">
+
+                <label>
+                    Título
+                </label>
+
+                <input
+                    type="text"
+                    id="postTitle"
+                    placeholder="Dê um título para sua publicação">
+
+
+                <label>
+                    Descrição
+                </label>
+
+                <textarea
+                    id="postDescription"
+                    rows="5"
+                    placeholder="Conte para a comunidade o que está acontecendo...">
+                </textarea>
+
+
+                <label>
+                    Tags
+                </label>
+
+                <input
+                    type="text"
+                    id="postTags"
+                    placeholder="#gaming #pc #somethinggamer">
+
+
+                <div
+                    class="media-upload"
+                    id="mediaUpload">
+
+                    <div class="upload-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M12 16V4"></path>
+                            <path d="M7 9l5-5 5 5"></path>
+                            <path d="M4 20h16"></path>
+
+                        </svg>
+
+                    </div>
+
+                    <strong>
+                        Adicione uma imagem ou vídeo
+                    </strong>
+
+                    <span>
+                        Arraste aqui ou selecione um arquivo
+                    </span>
+
+                    <input
+                        type="file"
+                        id="postFile"
+                        accept="image/*,video/*">
+
+                </div>
+
+
+                <div
+                    class="poll-fields"
+                    id="pollFields">
+
+                    <label>
+                        Opções da enquete
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Opção 1">
+
+                    <input
+                        type="text"
+                        placeholder="Opção 2">
+
+                    <input
+                        type="text"
+                        placeholder="Opção 3">
+
+                    <input
+                        type="text"
+                        placeholder="Opção 4">
+
+                </div>
+
+
+                <div class="post-footer">
+
+                    <span>
+                        Sua publicação aparecerá no seu perfil.
+                    </span>
+
+                    <button
+                        type="button"
+                        class="publish-btn"
+                        id="publishPost">
+
+                        Publicar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         SCRIPT
+    ========================================== -->
+
+    <div class="app-toast" id="appToast" role="status" aria-live="polite"></div>
+
+    <div class="welcome-experience" id="welcomeExperience" aria-hidden="true">
+        <div class="welcome-backdrop"></div>
+        <section class="welcome-card" aria-labelledby="welcomeTitle">
+            <button type="button" class="welcome-skip" id="welcomeSkip">Pular</button>
+            <div class="welcome-orbit" aria-hidden="true"><img src="assets/logo.png" alt=""></div>
+                <h2 id="welcomeTitle">Complete seu perfil</h2>
+            <p id="welcomeText">Reúna seu perfil, seus jogos, suas conquistas e sua comunidade em um único lugar.</p>
+            <div class="welcome-progress"><span id="welcomeProgress"></span></div>
+            <button type="button" class="app-primary-button" id="welcomeNext">Continuar</button>
+        </section>
+    </div>
+    <script type="module" src="dashboard.js"></script>
+
+</body>
+
+</html>

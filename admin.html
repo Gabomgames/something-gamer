@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Administração | Something Gamer</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="app-theme.css">
+<script type="module" src="theme.js">
+</script>
+</head>
+<body class="admin-page">
+<header class="app-header">
+<a class="app-brand" href="dashboard.html">
+<img src="assets/logo.png" alt="">
+<strong>SG Admin</strong>
+</a>
+<nav>
+<button class="admin-tab active" data-panel="usersPanel">Usuários</button>
+<button class="admin-tab" data-panel="promotionsPanel">Promoções</button>
+<button class="admin-tab" data-panel="communityPanel">Comunidade</button>
+<button class="admin-tab" data-panel="releasePanel">Publicar</button>
+</nav>
+<a class="app-outline-button" href="dashboard.html">Sair do painel</a>
+</header>
+<main class="admin-main">
+<section class="admin-heading">
+<div>
+<h1>Painel administrativo</h1>
+<p>Gerencie selos e campanhas.</p>
+</div>
+<div class="admin-stats">
+<article>
+<span>Usuários</span>
+<strong id="totalUsers">...</strong>
+</article>
+<article>
+<span>Verificados</span>
+<strong id="verifiedUsers">...</strong>
+</article>
+<article>
+<span>Pendentes</span>
+<strong id="pendingUsers">...</strong>
+</article>
+</div>
+</section>
+<section class="admin-panel active" id="usersPanel">
+<div class="admin-lock" data-lock="verification">
+<span><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4.6" y="10" width="14.8" height="10.2" rx="2.4"/><path d="M8.4 10V7.2a3.6 3.6 0 0 1 7.2 0V10"/></svg></span>
+<h2>Verificações protegidas</h2>
+<p>Digite a senha para gerenciar os selos.</p>
+<form data-unlock="verification">
+<input type="password" required placeholder="Senha de verificação">
+<button class="app-primary-button">Entrar</button>
+</form>
+<button class="forgot-admin-password" data-forgot="verification">Esqueci a senha</button>
+</div>
+<div class="admin-protected" data-area="verification" hidden>
+<div class="admin-panel-header">
+<div>
+<h2>Usuários e selos</h2>
+<p>Pesquise e escolha o reconhecimento.</p>
+</div>
+<input id="adminUserSearch" type="search" placeholder="Nome, username ou e-mail">
+</div>
+<div class="admin-table-wrap">
+<table>
+<thead>
+<tr>
+<th>Usuário</th>
+<th>Conta</th>
+<th>Selos</th>
+<th>Ação</th>
+</tr>
+</thead>
+<tbody id="usersTable">
+<tr>
+<td colspan="4">Carregando...</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="admin-panel" id="promotionsPanel">
+<div class="admin-lock" data-lock="promotion">
+<span><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4.6" y="10" width="14.8" height="10.2" rx="2.4"/><path d="M8.4 10V7.2a3.6 3.6 0 0 1 7.2 0V10"/></svg></span>
+<h2>Promoções protegidas</h2>
+<p>Digite a senha de promoções.</p>
+<form data-unlock="promotion">
+<input type="password" required placeholder="Senha de promoções">
+<button class="app-primary-button">Entrar</button>
+</form>
+<button class="forgot-admin-password" data-forgot="promotion">Esqueci a senha</button>
+</div>
+<div class="admin-protected" data-area="promotion" hidden>
+<div class="admin-panel-header">
+<div>
+<h2>Nova promoção</h2>
+<p>Defina a oferta, o prazo e a quantidade disponível.</p>
+</div>
+</div>
+<form id="promotionForm" class="promotion-form simple-promotion">
+<label>Título<input id="promotionTitle" maxlength="70" required placeholder="Ex.: Semana Gamer">
+</label>
+<label>Mensagem<textarea id="promotionDescription" maxlength="180" required placeholder="Descrição curta da oferta">
+</textarea>
+</label>
+<div class="form-grid">
+<label>Duração<select id="promotionDuration">
+<option value="1">1 dia</option>
+<option value="3">3 dias</option>
+<option value="7" selected>7 dias</option>
+<option value="30">30 dias</option>
+<option value="custom">Data personalizada</option>
+</select>
+</label>
+<label>Quantidade<select id="promotionQuantity">
+<option value="unlimited">Ilimitada</option>
+<option value="5">5 unidades</option>
+<option value="10">10 unidades</option>
+<option value="50">50 unidades</option>
+<option value="custom">Personalizada</option>
+</select>
+</label>
+</div>
+<div class="form-grid">
+<label id="durationCustomLabel" hidden>Encerramento<input id="promotionEndsAt" type="datetime-local">
+</label>
+<label id="quantityCustomLabel" hidden>Quantidade personalizada<input id="promotionCustomQuantity" type="number" min="1" max="100000">
+</label>
+</div>
+<details>
+<summary>Link e botão opcionais</summary>
+<div class="form-grid">
+<label>Texto do botão<input id="promotionButtonLabel" maxlength="30" placeholder="Aproveitar">
+</label>
+<label>Link<input id="promotionButtonUrl" type="url" placeholder="https://...">
+</label>
+</div>
+</details>
+<button class="app-primary-button" type="submit">Publicar promoção</button>
+</form>
+<div class="promotion-list" id="promotionList">
+</div>
+</div>
+</section>
+<section class="admin-panel" id="communityPanel">
+<div class="admin-panel-header">
+<div>
+<h2>Empresas e comunidade</h2>
+<p>Aprove empresas, revise denúncias e remova eventos inadequados.</p>
+</div>
+</div>
+<div class="moderation-grid">
+<section>
+<h3>Solicitações empresariais</h3>
+<div id="companyApplications">
+<p>Carregando...</p>
+</div>
+</section>
+<section>
+<h3>Denúncias abertas</h3>
+<div id="communityReports">
+<p>Carregando...</p>
+</div>
+</section>
+</div>
+</section>
+<section class="admin-panel release-panel" id="releasePanel"><div class="admin-panel-header"><div><h2>Publicação controlada</h2><p>Reveja o código antes de colocar uma versão no ar.</p></div></div><div class="release-grid"><article><span>ÚLTIMA ALTERAÇÃO</span><strong id="lastBuild">Carregando…</strong><small id="buildVersion">...</small></article><article><span>FIREBASE</span><strong>Publicação manual</strong><small>Site, regras do Firestore e Storage juntos.</small></article></div><div class="release-actions"><span class="app-outline-button release-hint">Publique pelo GitHub Actions do repositório do SG (workflow "Publicar SG no Firebase")</span><a class="app-outline-button" href="install.html">Instalar SG só para mim</a></div><p class="release-note">O botão abre a ação segura no GitHub. Nenhuma chave administrativa fica exposta no navegador.</p></section>
+</main>
+<div class="app-toast" id="appToast">
+</div>
+<script type="module" src="admin.js">
+</script>
+</body>
+</html>

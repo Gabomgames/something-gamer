@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Gamer Verificado">
+  <defs><linearGradient id="v" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#168cff"/><stop offset="1" stop-color="#593cff"/></linearGradient></defs>
+  <rect x="1" y="1" width="22" height="22" rx="7" fill="url(#v)" stroke="#7796ff" stroke-width="1"/>
+  <path d="m6.6 12.2 3.25 3.25 7.55-7.4" fill="none" stroke="#fff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

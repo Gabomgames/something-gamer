@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Something Gamer</title>
+    <meta name="description" content="O ecossistema que conecta gamers, empresas e eventos: perfil com sua biblioteca, conversas em servidores e eventos da comunidade.">
+    <link rel="icon" type="image/png" href="assets/logo.png"><link rel="apple-touch-icon" href="assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@500..800&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="landing">
+
+    <header>
+
+        <a href="index.html" class="brand">
+            <img src="assets/logo.png" alt="">
+            <span>Something Gamer</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#ecosystem">Explorar</a>
+            <a href="#events">Eventos</a>
+            <a href="#companies">Empresas</a>
+        </nav>
+
+        <button class="login-btn" onclick="window.location.href='login.html'">
+            Entrar
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <h1>O lugar onde gamers se encontram.</h1>
+
+            <div class="hero-linha">
+
+                <div class="hero-texto">
+
+                    <p>
+                        Um ecossistema só, com três portas de entrada: o gamer monta seu perfil
+                        e sua biblioteca, a empresa fala com a comunidade sem intermediário, e
+                        os eventos acontecem no meio dos dois.
+                    </p>
+
+                    <div class="hero-acoes">
+                        <button class="primary-btn" onclick="window.location.href='register.html'">
+                            Começar agora
+                        </button>
+                        <a href="#ecosystem">Ver como funciona</a>
+                    </div>
+
+                </div>
+
+                <!-- As três portas já no herói: a cor de cada uma é a mesma da faixa lá embaixo. -->
+                <ul class="portas">
+                    <li class="porta porta-gamers">
+                        <a href="#gamers">
+                            <strong>Gamers</strong>
+                            <span>Perfil, biblioteca e conquistas</span>
+                        </a>
+                    </li>
+                    <li class="porta porta-empresas">
+                        <a href="#companies">
+                            <strong>Empresas</strong>
+                            <span>Falar com a comunidade direto</span>
+                        </a>
+                    </li>
+                    <li class="porta porta-eventos">
+                        <a href="#events">
+                            <strong>Eventos</strong>
+                            <span>Campeonatos, treinos e encontros</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <section class="ecosystem" id="ecosystem">
+
+            <article class="publico publico-gamers" id="gamers">
+
+                <p class="publico-quem">Para gamers</p>
+
+                <div class="publico-corpo">
+                    <h2>Sua identidade gamer.</h2>
+                    <p>
+                        Crie seu perfil, mostre os jogos que você ama e construa sua
+                        presença dentro do Something Gamer.
+                    </p>
+                    <button class="publico-btn" onclick="window.location.href='register.html'">
+                        Criar meu perfil
+                    </button>
+
+                    <div class="publico-plataformas">
+                        <div class="plataformas-marcas">
+                            <img src="assets/steam.png" alt="Steam">
+                            <img src="assets/xbox.png" alt="Xbox">
+                            <img src="assets/playstation.png" alt="PlayStation">
+                        </div>
+                        <p>Steam já conecta e importa sua biblioteca. Xbox e PlayStation
+                           entram assim que as credenciais oficiais saírem.</p>
+                    </div>
+                </div>
+
+                <div class="publico-lado">
+                    <ul class="publico-itens">
+                        <li>Perfil gamer personalizado</li>
+                        <li>Biblioteca de jogos</li>
+                        <li>Conquistas e estatísticas</li>
+                        <li>Conexões com plataformas</li>
+                        <li>Descobrir outros gamers</li>
+                    </ul>
+
+                </div>
+
+            </article>
+
+            <article class="publico publico-empresas" id="companies">
+
+                <p class="publico-quem">Para empresas</p>
+
+                <div class="publico-corpo">
+                    <h2>Encontre sua comunidade.</h2>
+                    <p>
+                        Empresas podem se conectar diretamente com gamers, criadores e
+                        comunidades dentro do ecossistema.
+                    </p>
+                    <button class="publico-btn" onclick="window.location.href='companies.html'">
+                        Para empresas
+                    </button>
+                </div>
+
+                <div class="publico-lado">
+                    <ul class="publico-itens">
+                        <li>Perfil oficial da empresa</li>
+                        <li>Divulgar produtos e novidades</li>
+                        <li>Criar campanhas e ações</li>
+                        <li>Conectar com criadores</li>
+                        <li>Encontrar comunidades gamer</li>
+                    </ul>
+                </div>
+
+            </article>
+
+            <article class="publico publico-eventos" id="events">
+
+                <p class="publico-quem">Para eventos</p>
+
+                <div class="publico-corpo">
+                    <h2>O próximo evento começa aqui.</h2>
+                    <p>
+                        Campeonato, treino ou encontro da comunidade: qualquer membro
+                        publica e acompanha quem confirmou presença, em tempo real.
+                    </p>
+                    <button class="publico-btn" onclick="window.location.href='events.html'">
+                        Explorar eventos
+                    </button>
+                </div>
+
+                <div class="publico-lado">
+                    <ul class="publico-itens">
+                        <li>Descobrir eventos</li>
+                        <li>Competições e desafios</li>
+                        <li>Eventos da comunidade</li>
+                        <li>Participação e interação</li>
+                        <li>Acompanhar novidades</li>
+                    </ul>
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <section class="fechamento">
+
+            <h2>Entre para o <span class="nao-quebra">Something Gamer</span>.</h2>
+
+            <p class="fechamento-nota">
+                Uma conta abre as três portas: <span class="t-gamers">gamers</span>,
+                <span class="t-empresas">empresas</span> e <span class="t-eventos">eventos</span>.
+            </p>
+
+            <button class="primary-btn" onclick="window.location.href='register.html'">
+                Criar minha conta
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-brand">
+            <img src="assets/logo.png" alt="">
+            <span>Something Gamer</span>
+        </div>
+
+        <nav class="footer-links">
+            <a href="regras.html">Regras</a>
+            <a href="support.html">Ajuda</a>
+            <a href="verification.html">Verificação</a>
+            <a href="install.html">Instalar</a>
+        </nav>
+
+        <span class="footer-company">Now Desenvolvimento Tech</span>
+
+    </footer>
+
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="landing.js"></script>
+
+</body>
+
+</html>

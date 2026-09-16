@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Configurações | Something Gamer</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="app-theme.css">
+</head>
+<body class="settings-page">
+<header class="app-header">
+<a class="app-brand" href="feed.html">
+<img src="assets/logo.png" alt="">
+<strong>Something Gamer</strong>
+</a>
+<nav>
+<a href="feed.html">Feed</a>
+<a href="dashboard.html">Perfil</a>
+<a class="active" href="settings.html">Configurações</a>
+<a href="support.html">Suporte</a>
+</nav>
+<a class="app-outline-button" href="dashboard.html">Voltar</a>
+</header>
+<main class="settings-main">
+<header class="settings-heading">
+<h1>Preferências do aplicativo</h1>
+<p>Estas escolhas ficam salvas neste dispositivo e não alteram a identidade oficial da plataforma.</p>
+</header>
+<form id="appearanceForm" class="settings-grid">
+<section class="settings-card">
+<h2>Tema</h2>
+<p>Escolha a aparência da interface.</p>
+<div class="choice-grid">
+<label>
+<input type="radio" name="theme" value="default">
+<span>
+<i class="theme-swatch default">
+</i>
+<strong>Padrão SG</strong>
+<small>Azul e violeta</small>
+</span>
+</label>
+<label>
+<input type="radio" name="theme" value="dark">
+<span>
+<i class="theme-swatch dark">
+</i>
+<strong>Escuro</strong>
+<small>Preto discreto</small>
+</span>
+</label>
+<label>
+<input type="radio" name="theme" value="light">
+<span>
+<i class="theme-swatch light">
+</i>
+<strong>Claro</strong>
+<small>Leitura iluminada</small>
+</span>
+</label>
+</div>
+</section>
+<section class="settings-card">
+<h2>Logo na interface</h2>
+<p>Altere apenas a apresentação local da marca.</p>
+<div class="choice-grid logo-choices">
+<label>
+<input type="radio" name="logo" value="color">
+<span>
+<img src="assets/logo.png" alt="">
+<strong>Colorida</strong>
+</span>
+</label>
+<label>
+<input type="radio" name="logo" value="mono">
+<span>
+<img src="assets/logo.png" alt="">
+<strong>Monocromática</strong>
+</span>
+</label>
+<label>
+<input type="radio" name="logo" value="minimal">
+<span>
+<img src="assets/logo.png" alt="">
+<strong>Somente símbolo</strong>
+</span>
+</label>
+</div>
+</section>
+<section class="settings-card">
+<h2>Conforto</h2>
+<div class="setting-row">
+<div>
+<strong>Interface compacta</strong>
+<small>Reduz espaços entre os elementos.</small>
+</div>
+<input id="compactMode" type="checkbox">
+</div>
+<div class="setting-row">
+<div>
+<strong>Reduzir animações</strong>
+<small>Recomendado para celulares mais lentos.</small>
+</div>
+<input id="reduceMotion" type="checkbox">
+</div>
+</section>
+<section class="settings-card chat-colors">
+<h2>Cores das conversas</h2><p>Estas cores aparecem somente para você.</p>
+<div class="color-pickers"><label><span>Outras pessoas</span><input id="incomingBubble" type="color" value="#17345f"><small id="incomingHex">#17345F</small></label><label><span>Suas mensagens</span><input id="outgoingBubble" type="color" value="#1565b8"><small id="outgoingHex">#1565B8</small></label></div>
+<div class="bubble-preview"><span>Mensagem recebida</span><span>Minha mensagem</span></div>
+</section>
+<section class="settings-card notification-settings">
+<h2>Notificações</h2>
+<p>Escolha como o SG avisa quando uma mensagem chega.</p>
+<label class="settings-field">Som<select id="notificationSound"><option value="sg">Som padrão do SG</option><option value="url">Som da internet</option><option value="device">Arquivo deste dispositivo</option><option value="silent">Sem som</option></select></label>
+<label id="notificationUrlWrap" class="settings-field" hidden>Link do áudio<input id="notificationSoundUrl" type="url" placeholder="https://exemplo.com/som.mp3"></label>
+<label id="notificationFileWrap" class="settings-field" hidden>Arquivo de áudio<input id="notificationSoundFile" type="file" accept="audio/*"><small>Até 700 KB. Fica salvo somente neste dispositivo.</small></label>
+<label class="setting-row"><span><strong>Vibrar o celular</strong><small>Disponível em aparelhos compatíveis.</small></span><input id="notificationVibration" type="checkbox"></label>
+<div class="notification-actions"><button id="enableNotifications" type="button">Ativar notificações</button><button id="testNotification" type="button">Testar som e vibração</button></div>
+</section>
+<section class="settings-card account-links">
+<h2>Ajuda e conta</h2>
+<a href="tutorial.html">Rever tutorial do SG <span>→</span>
+</a>
+<a href="support.html">Central de suporte <span>→</span>
+</a>
+<a href="edit-profile.html">Editar meu perfil <span>→</span>
+</a>
+</section>
+<footer class="settings-actions">
+<button type="button" id="resetAppearance">Restaurar padrão</button>
+<button type="submit" class="app-primary-button">Salvar preferências</button>
+</footer>
+</form>
+</main>
+<div class="app-toast" id="appToast" role="status">
+</div>
+<script type="module" src="settings.js">
+</script>
+</body>
+</html>

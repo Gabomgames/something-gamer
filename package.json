@@ -1,0 +1,14 @@
+{
+  "name": "something-gamer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verificar": "node scripts/verificar.mjs",
+    "build": "node scripts/build.mjs",
+    "deploy": "npm run verificar && npm run build && firebase deploy --only hosting,firestore:rules,firestore:indexes,storage,functions --project something-gamer"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "javascript-obfuscator": "^4.1.1"
+  }
+}

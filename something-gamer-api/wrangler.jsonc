@@ -1,0 +1,18 @@
+{
+  "name": "something-gamer-api",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-11",
+  "workers_dev": true,
+  "vars": {
+    "APP_URL": "https://something-gamer.web.app",
+    "FIREBASE_API_KEY": "AIzaSyDd43TsFijT8zwyzlWlaikYMdrxNOeOabo",
+    "ADMIN_EMAILS": "gabobnu2@gmail.com,nowdesenvolvimentotech@gmail.com",
+    "ADMIN_RECOVERY_EMAIL": "nowdesenvolvimentotech@gmail.com"
+  },
+  "kv_namespaces": [
+    { "binding": "SG_AUTH", "id": "88afe720974b427e8ec6553a0bbf2941" }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

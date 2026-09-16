@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Feed | Something Gamer</title><link rel="icon" type="image/png" href="assets/logo.png"><link rel="apple-touch-icon" href="assets/logo.png"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="app-theme.css"><script type="module" src="theme.js"></script></head>
+<body class="feed-page">
+<header class="sg-header"><a class="brand" href="feed.html"><img src="assets/logo.png" alt=""><span>Something Gamer</span></a><nav aria-label="Navegação principal"><a class="active" href="feed.html">Feed</a><a href="dashboard.html">Meu perfil</a><a href="social.html">Comunidade</a><a href="chat.html">Chat</a><a href="Games/Games.html">Jogos</a><a href="settings.html">Configurações</a></nav><a class="login-btn" href="dashboard.html">Meu perfil</a></header>
+<main class="feed-shell">
+ <div class="feed-page-title"><div><h1>Feed gamer.</h1><p>Descubra publicações, notícias e conversas da comunidade.</p></div><a class="feed-create-link" href="dashboard.html#criar-publicacao">Criar publicação no perfil</a></div>
+ <div class="feed-layout"><div>
+  <div class="feed-toolbar"><div><h2>Feed da comunidade</h2></div><div class="feed-filters" aria-label="Filtrar publicações"><button type="button" class="feed-filter active" data-feed="all">Todos</button><button type="button" class="feed-filter" data-feed="video">Vídeos</button><button type="button" class="feed-filter" data-feed="news">Notícias</button><button type="button" class="feed-filter" data-feed="poll">Enquetes</button></div></div>
+  <div id="feedList" class="feed-list"><div class="feed-empty">Carregando publicações...</div></div>
+</div><aside class="community-sidebar"><section class="sidebar-card"><div class="sidebar-heading"><h3>Participe da conversa</h3></div><p class="composer-note">Seu perfil fica separado do feed. Você pode excluir suas próprias publicações.</p><a class="app-outline-button" href="dashboard.html">Ver meu perfil</a></section><section class="sidebar-card verification-card-mini"><img class="gamer-seal large" src="assets/verified-badge.png?v=27" alt=""><div><h3>Destaque seu perfil</h3><p>Conheça os critérios e benefícios do selo.</p><a href="verification.html">Conhecer benefícios →</a></div></section></aside></div>
+</main><div class="app-toast" id="appToast" role="status" aria-live="polite"></div><script type="module" src="feed.js"></script></body></html>
